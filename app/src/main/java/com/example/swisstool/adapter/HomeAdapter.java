@@ -1,4 +1,4 @@
-package com.example.swisstool;
+package com.example.swisstool.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,14 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.swisstool.HomeOptions;
+import com.example.swisstool.R;
+
 import java.util.List;
 
-class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
 
     private List<HomeOptions> itemNames;
     private HomeAdapterInteraction listener;
 
-    HomeAdapter(List<HomeOptions> itemNames) {
+    public HomeAdapter(List<HomeOptions> itemNames) {
         this.itemNames = itemNames;
     }
 
@@ -57,11 +60,11 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
         }
     }
 
-    void setListener(HomeAdapterInteraction listener) {
+    public void setListener(HomeAdapterInteraction listener) {
         this.listener = listener;
     }
 
-    interface HomeAdapterInteraction {
+    public interface HomeAdapterInteraction {
         void onItemClicked(HomeOptions itemName);
     }
 }

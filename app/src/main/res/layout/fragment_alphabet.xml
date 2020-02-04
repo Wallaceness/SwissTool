@@ -7,7 +7,7 @@
     android:background="@android:color/background_light"
     android:clickable="true"
     android:focusable="true"
-    tools:context=".AlphabetFragment">
+    tools:context=".views.AlphabetFragment">
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/ibListViewer"

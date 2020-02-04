@@ -1,4 +1,4 @@
-package com.example.swisstool;
+package com.example.swisstool.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.swisstool.R;
+
 import java.util.List;
 
-class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.AlphabetViewHolder> {
+public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.AlphabetViewHolder> {
 
     private List<Character> alphabets;
 

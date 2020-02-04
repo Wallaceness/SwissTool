@@ -1,9 +1,13 @@
-package com.example.swisstool;
+package com.example.swisstool.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+
+import com.example.swisstool.R;
+import com.example.swisstool.views.AlphabetFragment;
+import com.example.swisstool.views.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements HomeFragment.HomeFragmentInteraction {
 
