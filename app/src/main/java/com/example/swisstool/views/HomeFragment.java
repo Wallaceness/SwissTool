@@ -46,7 +46,12 @@ public class HomeFragment extends Fragment implements HomeAdapter.HomeAdapterInt
         rvHome.setLayoutManager(new LinearLayoutManager(requireContext()));
         rvHome.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.HORIZONTAL));
         adapter = new HomeAdapter(
-                Arrays.asList(HomeOptions.ALPHABET_VIEWER, HomeOptions.STRESS_TAPPER, HomeOptions.BIRTHSTONES)
+                Arrays.asList(
+                        HomeOptions.ALPHABET_VIEWER,
+                        HomeOptions.STRESS_TAPPER,
+                        HomeOptions.BIRTHSTONES,
+                        HomeOptions.ANIMAL_HOUSE
+                )
         );
         return view;
     }
@@ -74,6 +79,8 @@ public class HomeFragment extends Fragment implements HomeAdapter.HomeAdapterInt
             case BIRTHSTONES:
                 listener.loadBirthstones();
                 break;
+            case ANIMAL_HOUSE:
+                break;
         }
     }
 
@@ -83,5 +90,7 @@ public class HomeFragment extends Fragment implements HomeAdapter.HomeAdapterInt
         void loadStressTapper();
 
         void loadBirthstones();
+
+        void loadAnimalHouse();
     }
 }
