@@ -11,6 +11,7 @@ import com.example.swisstool.R;
 import com.example.swisstool.model.Animal;
 import com.google.android.material.textview.MaterialTextView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,12 +21,13 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
     public AnimalAdapter() {
         animalList = Arrays.asList(
-                new Animal("Johny"),
-                new Animal("Zabomafoo"),
-                new Animal("Clifford"),
-                new Animal("Courage"),
-                new Animal("Garfield")
+                new Animal("Johny", "None", "NA"),
+                new Animal("Zabomafoo", "None", "NA"),
+                new Animal("Clifford", "None", "NA"),
+                new Animal("Courage", "None", "NA"),
+                new Animal("Garfield", "None", "NA")
         );
+        animalList = new ArrayList<Animal>(animalList);
     }
 
     @NonNull
