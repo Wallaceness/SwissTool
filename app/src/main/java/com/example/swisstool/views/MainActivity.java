@@ -15,7 +15,9 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.Home
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadHomeFragment();
+        if (savedInstanceState==null){
+            loadHomeFragment();
+        }
     }
 
     private void loadHomeFragment() {

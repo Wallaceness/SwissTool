@@ -41,6 +41,9 @@ public class HomeFragment extends Fragment implements HomeAdapter.HomeAdapterInt
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        if (savedInstanceState!=null){
+            this.listener=(HomeFragmentInteraction) getActivity();
+        }
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         rvHome = view.findViewById(R.id.rvHome);
         rvHome.setLayoutManager(new LinearLayoutManager(requireContext()));
